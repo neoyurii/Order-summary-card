@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Pale-blue);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1440px) {
+    main{
+        background-image: url("./images/pattern-background-desktop.svg");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+}
+
+article{
+    width: 80%;
+    max-width: 380px;
+    height: 570px;
+    background-color: #FFF;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image{
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+
+.container{
+    width: 100%;
+    height: calc(100% - 30%);
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+
+.description{
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--Desaturated-blue);
+}
+
+.area-plan-manager{
+    width: 100%;
+    height: 24%;
+    padding: 0 5px;
+    background-color: var(--Very-pale-blue);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.area-plan-selected{
+    height: 45%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5px;
+}
+
+.area-plan-selected > h3{
+    font-size: 1.4rem;
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+.area-plan-selected > span{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--Desaturated-blue);
+}
+
+.change-plan-link{
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--Bright-blue);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.change-plan-link:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.area-buttons{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+}
+
+.button{
+    width: 100%;
+    height: calc(100% / 1.5);
+    text-align: center;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 0.2px;
+}
+
+.payment-button{
+    font-weight: 900;
+    background-color: var(--Bright-blue);
+    color: #FFF;
+    box-shadow: 0px 5px 20px var(--Desaturated-blue);
+}
+
+.payment-button:hover{
+    opacity: 0.8;
+}
+
+.cancel-order-button{
+    font-weight: 900;
+    background-color: transparent;
+    color: var(--Desaturated-blue);
+}
+
+.cancel-order-button:hover{
+    color: var(--Dark-blue);
+}
